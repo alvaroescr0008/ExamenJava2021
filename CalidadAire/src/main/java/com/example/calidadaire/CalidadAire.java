@@ -26,10 +26,26 @@ public class CalidadAire {
         List<MedidaCO2> lecturas = new ArrayList<>();
         //double contador = 0;
         //double total = 0;
-        for (int n = 0; n < FECHA.lenght; n++) {
+        for (int n = 0; n < FECHA.length; n++) {
             lecturas.add(
                     new MedidaCO2(FECHA[n],LELECTRONICA[n], LTELEMATICA[n], AULA9[n])
             );
         }
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+
+        Set<Integer> valores = new HashSet<>();
+        for (MedidaCO2 lectura : lecturas) {
+            valores.add(lectura.getAula9() & lectura.getAulaElectronica() & lectura.getAulaTelematica());
+        }
+        System.out.println(valores.toString());
+        System.out.println(valores.size());
+
+
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+
     }
 }
