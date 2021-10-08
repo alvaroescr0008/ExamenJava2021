@@ -1,8 +1,10 @@
 package com.example.calidadaire;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CalidadAire {
@@ -34,18 +36,49 @@ public class CalidadAire {
         //-------------------------------------------------------------------------
         //-------------------------------------------------------------------------
         //-------------------------------------------------------------------------
-
         Set<Integer> valores = new HashSet<>();
         for (MedidaCO2 lectura : lecturas) {
             valores.add(lectura.getAula9() & lectura.getAulaElectronica() & lectura.getAulaTelematica());
         }
         System.out.println(valores.toString());
         System.out.println(valores.size());
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
+        int contador;
+
+        for(MedidaCO2 medidas : lecturas){
+            if(medidas.getAulaElectronica() =>800){
+                contador++;
+            }
+            return contador;
+        }
+
+        Map<Integer, Integer> aulaElectronica = new HashMap<Integer, Integer>();
+        aulaElectronica.put(1, 500);
+        aulaElectronica.put(2, 650);
+        aulaElectronica.put(3, 700);
+        aulaElectronica.put(4, 850);
+        aulaElectronica.put(5, 875);
+        aulaElectronica.put(6, 600);
+        aulaElectronica.put(7, 550);
+        aulaElectronica.put(8, 650);
+        aulaElectronica.put(9, 850);
+        aulaElectronica.put(10,600);
+        for ()
+
+        //-------------------------------------------------------------------------
+        //-------------------------------------------------------------------------
 
 
-        //-------------------------------------------------------------------------
-        //-------------------------------------------------------------------------
-        //-------------------------------------------------------------------------
+        for (String habitacion : habitaciones) {
+            if (lecturas.getHabitacion().equals(habitacion)) {
+                total == lecturas.getTemperatura();
+                contador++;
+            }
+        }
+        System.out.println("Media" + habitacion + ":" + total / contador);
+
 
     }
 }
