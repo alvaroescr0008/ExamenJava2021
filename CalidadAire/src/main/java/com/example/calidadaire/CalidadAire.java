@@ -1,5 +1,8 @@
 package com.example.calidadaire;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CalidadAire {
 
 
@@ -10,4 +13,9 @@ public class CalidadAire {
     static int LELECTRONICA[] = {500, 650, 700, 850, 875, 600, 550, 650, 850, 600};
     static int LTELEMATICA[] = {450, 500, 675, 875, 850, 700, 750, 880, 700, 600};
     static int AULA9[] = {450, 500, 550, 650, 700, 800, 750, 600, 650, 600};
+
+
+    public static void main(String[] Args){
+
+    }
 }
