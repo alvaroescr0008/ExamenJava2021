@@ -1,6 +1,8 @@
 package com.example.calidadaire;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CalidadAire {
@@ -15,7 +17,19 @@ public class CalidadAire {
     static int AULA9[] = {450, 500, 550, 650, 700, 800, 750, 600, 650, 600};
 
 
+
+
+
+
     public static void main(String[] Args){
 
+        List<MedidaCO2> lecturas = new ArrayList<>();
+        //double contador = 0;
+        //double total = 0;
+        for (int n = 0; n < FECHA.lenght; n++) {
+            lecturas.add(
+                    new MedidaCO2(FECHA[n],LELECTRONICA[n], LTELEMATICA[n], AULA9[n])
+            );
+        }
     }
 }
